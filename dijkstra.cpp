@@ -61,6 +61,8 @@ public:
 
 			visited[minNode] = true;
 			for (size_t adjNode : _topo[minNode]) {
+				if (visited[adjNode]) continue;
+				
 				const size_t newCost = costs[minNode] + _weights[{ minNode, adjNode }];
 				if (newCost < costs[adjNode]) {
 					costs[adjNode] = newCost;
