@@ -102,7 +102,7 @@ int main()
 	};
 
 	Graph g { topo, weights };
-	const vector<size_t> costs = g.dijkstra(4);
+	const vector<size_t> costs = g.dijkstra(0);
 
 	printVecIdx(costs);
 
